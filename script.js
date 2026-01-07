@@ -92,7 +92,7 @@ participationForm.addEventListener('submit', async (e) => {
         });
         
         // no-cors 모드에서는 응답을 읽을 수 없으므로 성공으로 간주
-        submitBtn.textContent = '✓ 신청 완료되었습니다';
+        submitBtn.textContent = '✓ 신청해주셔서 감사합니다. 곧 확정 연락을 드리겠습니다.';
         submitBtn.style.background = 'rgba(255, 255, 255, 0.9)';
         
         // 3초 후 카드 뒤집기
