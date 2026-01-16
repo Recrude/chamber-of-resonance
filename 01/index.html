@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamber of Resonance - 행사 참여 신청</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card-container" id="cardContainer">
+            <div class="card" id="card">
+                <!-- 앞면: 포스터 -->
+                <div class="card-front">
+                    <img src="poster.png" alt="Chamber of Resonance Poster" class="poster-image">
+                    <!-- <div class="click-hint">클릭하여 참여하기</div> -->
+                </div>
+                
+                <!-- 뒷면: 폼 -->
+                <div class="card-back">
+                    <div class="form-container">
+                        <div class="event-info">
+                            <img src="info.svg" alt="행사 안내" class="info-image">
+                        </div>
+                        
+                        <form id="participationForm">
+                            <!-- 신청 대기 오버레이 (19:00 이전에 자동 표시) -->
+                            <div class="waiting-overlay" id="waitingOverlay" style="display: none;">
+                                <div class="overlay-message">
+                                    <p>신청은 1월 16일 19:00에<br>오픈됩니다.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- 신청 마감 오버레이 (필요시 주석 해제) -->
+                            <!-- <div class="closed-overlay">
+                                <div class="closed-message">
+                                    <p>신청이 마감되었습니다.<br>관심을 가져 주셔서 감사합니다.</p>
+                                </div>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="name">이름 *</label>
+                                <input type="text" id="name" name="name" required placeholder="김영원">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="instagram">인스타그램 주소(선택 사항)</label>
+                                <input type="text" id="instagram" name="instagram" placeholder="@username 또는 프로필 링크">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">이메일 *</label>
+                                <input type="email" id="email" name="email" required placeholder="example@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact">연락처 *</label>
+                                <input type="tel" id="contact" name="contact" required placeholder="010-1234-5678">
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="confirmed" name="confirmed" required>
+                                    <span class="checkbox-text">위 내용을 확인했습니다. 행사에 신청합니다.</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                            <button type="submit" class="submit-btn">참여 신청하기</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
